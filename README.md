@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Zero Template
+
+**Zero Template** is the opinionated, premium starting point for modern Next.js applications. Designed to serve as the default foundation for all future projects, it combines best-in-class tools with a focus on visual excellence and performance.
+
+## Key Features & Stack
+
+Zero Template is packed with modern primitives for high-performance frontend development:
+
+### ⚡️ Core Frameworks
+- **Next.js 15+ (App Router)**: The foundation for modern React applications.
+- **TypeScript**: Type-safe development out of the box.
+
+### 🍱 UI & Styling
+- **Tailwind CSS 4+**: Utility-first CSS with next-gen performance.
+- **Fluid Tailwind Plugin**: Seamlessly scale typography and spacing across all viewports.
+- **ShadCN UI**: High-quality, accessible components built on Radix UI.
+- **Tabler Icons**: A robust library of 5300+ pixel-perfect icons.
+
+### 🎬 Animations & Interactions
+- **Next View Transitions**: Smooth Page transitions with the native View Transitions API.
+- **Motion (Framer Motion)**: Production-ready declarative animations.
+- **GSAP**: The gold standard for high-performance scroll-driven and complex animations.
+- **Tailwind Motion Plugin**: Bring Tailwind's utility-first approach to animations.
+
+### 🎨 Typography
+- **Plus Jakarta Sans**: A premium, geometric variable font optimized via Next.js Font Optimization (Self-hosted).
+- **Fluid Scaling**: Automatically calculated responsive font sizes.
+
+## Package Manifest
+
+| Package | Purpose |
+| :--- | :--- |
+| `next-view-transitions` | Native-feel page transitions |
+| `motion` | Declarative UI animations |
+| `gsap` | Complex timeline-based animations |
+| `fluid-tailwindcss` | Responsive scaling logic |
+| `tailwindcss-motion` | Utility-first animations |
+| `@tabler/icons-react` | Extensive icon library |
+| `lucide-react` | Alternative lightweight icons |
+| `@base-ui/react` | Headless unstyled components |
 
 ## Getting Started
 
-First, run the development server:
+First, install dependencies:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm install
+```
+
+Then, run the development server:
+
+```bash
 pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Future Proposals
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This template is proposed as the standard for all upcoming projects to ensure consistency in design, performance metrics, and codebase maintainability.
