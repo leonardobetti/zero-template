@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import { ViewTransitions } from 'next-view-transitions'
 
-const plusJakartaSans = Plus_Jakarta_Sans({
-  variable: "--font-plus-jakarta-sans",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
@@ -22,7 +22,7 @@ export default function RootLayout({
     <ViewTransitions>
     <html lang="en">
       <body
-        className={`${plusJakartaSans.variable} font-sans antialiased`}
+        className={`${inter.variable} font-sans antialiased`}
       >
         {children}
       </body>

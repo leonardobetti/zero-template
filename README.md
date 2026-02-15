@@ -1,5 +1,7 @@
 # Zero Template
 
+**Live Demo**: [zero-template-seven.vercel.app](https://zero-template-seven.vercel.app/)
+
 **Zero Template** is the opinionated, premium starting point for modern Next.js applications. Designed to serve as the default foundation for all future projects, it combines best-in-class tools with a focus on visual excellence and performance.
 
 ## Key Features & Stack
@@ -24,7 +26,7 @@ Zero Template is packed with modern primitives for high-performance frontend dev
 - **Tailwind Motion Plugin**: Bring Tailwind's utility-first approach to animations.
 
 ### 🎨 Typography
-- **Plus Jakarta Sans**: A premium, geometric variable font optimized via Next.js Font Optimization (Self-hosted).
+- **Inter**: A high-quality, variable sans-serif font optimized via Next.js Font Optimization (Self-hosted).
 - **Fluid Scaling**: Automatically calculated responsive font sizes.
 
 ## Package Manifest
