@@ -5,30 +5,9 @@ import { Link } from "next-view-transitions";
 import { 
   IconArrowUpRight, 
   IconBrandGithub, 
-  IconBolt,
-  IconLayout,
-  IconPalette,
-  IconDeviceLaptop,
-  IconCode
+  IconCode,
+  IconTerminal
 } from "@tabler/icons-react";
-
-const PRINCIPLES = [
-  {
-    title: "Fluid Design System",
-    description: "Built with fluid-tailwindcss for seamless scaling across all screen sizes without breakpoints.",
-    icon: IconBolt,
-  },
-  {
-    title: "Premium Aesthetics",
-    description: "A Vercel-inspired neutral design language focused on clarity, typography, and subtle interactions.",
-    icon: IconPalette,
-  },
-  {
-    title: "Performance First",
-    description: "Next.js 15+ (App Router), Turbopack, and optimized font loading for near-instant interaction.",
-    icon: IconDeviceLaptop,
-  }
-];
 
 const STACK = [
   { name: "Next.js 15", category: "Framework", link: "https://nextjs.org" },
@@ -38,9 +17,15 @@ const STACK = [
   { name: "Fluid Tailwind", category: "Layout", link: "https://fluid-tailwindcss.com" }
 ];
 
+const QUICK_START = [
+  { name: "Clone repository", command: "git clone https://github.com/leonardobetti/zero-template.git" },
+  { name: "Install dependencies", command: "pnpm install" },
+  { name: "Start development", command: "pnpm dev" }
+];
+
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white dark:bg-black text-zinc-900 dark:text-zinc-100 selection:bg-zinc-900 selection:text-white dark:selection:bg-white dark:selection:text-black">
+    <div className="min-h-screen bg-white dark:bg-black text-zinc-900 dark:text-zinc-100 selection:bg-zinc-900 selection:text-white dark:selection:bg-white dark:selection:text-black font-sans">
       {/* Centralized Layout Container: 728px = 45.5rem */}
       <main className="max-w-[45.5rem] mx-auto px-6 ~py-12/24">
         
@@ -58,14 +43,14 @@ export default function Home() {
         </header>
 
         {/* Hero Section */}
-        <section className="~mb-24/32">
+        <section className="~mb-32/48">
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             className="~text-4xl/6xl font-bold tracking-tight leading-[1.1] mb-8"
           >
-            The premium foundation for your next <span className="text-zinc-400 dark:text-zinc-500 italic">digital experience.</span>
+            Foundation for your next <span className="text-zinc-400 dark:text-zinc-500 italic">digital product.</span>
           </motion.h1>
           
           <motion.p 
@@ -86,7 +71,7 @@ export default function Home() {
           >
             <Link 
               href="https://github.com/leonardobetti/zero-template" 
-              className="px-6 py-3 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 rounded-full font-medium hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center gap-2"
+              className="px-6 py-3 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 rounded-full font-medium hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center gap-2 text-sm"
             >
               <IconCode size={18} />
               Clone Template
@@ -98,23 +83,8 @@ export default function Home() {
           </motion.div>
         </section>
 
-        {/* Core Principles */}
-        <section className="~mb-24/32 border-t border-zinc-200 dark:border-zinc-800">
-          <div className="grid grid-cols-1 gap-px bg-zinc-200 dark:bg-zinc-800 border-x border-b border-zinc-200 dark:border-zinc-800 overflow-hidden">
-            {PRINCIPLES.map((principle, i) => (
-              <div key={principle.title} className="bg-white dark:bg-black p-8 flex flex-col gap-4">
-                <div className="flex items-center gap-3">
-                  <principle.icon size={20} className="text-zinc-400" />
-                  <h3 className="text-lg font-bold">{principle.title}</h3>
-                </div>
-                <p className="text-sm text-zinc-500 leading-relaxed">{principle.description}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
         {/* Tech Stack List */}
-        <section className="~mb-24/32">
+        <section className="~mb-32/48 pt-12">
           <div className="flex items-center justify-between mb-8 pb-4 border-b border-zinc-200 dark:border-zinc-800">
             <h2 className="text-xl font-bold">The Stack</h2>
             <Link href="https://github.com/leonardobetti/zero-template/blob/main/package.json" className="group flex items-center gap-1 text-xs text-zinc-500 hover:text-zinc-900 dark:hover:text-white transition-colors font-medium uppercase tracking-widest">
@@ -140,27 +110,37 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Setup Section */}
-        <section className="py-16 px-8 rounded-2xl bg-zinc-50 dark:bg-zinc-900/50 border border-zinc-200 dark:border-zinc-800">
-          <h2 className="text-2xl font-bold mb-4">Quick Start</h2>
-          <p className="text-sm text-zinc-500 mb-8">Get up and running in less than a minute.</p>
-          <div className="bg-zinc-900 text-zinc-400 p-4 rounded-lg font-mono text-xs overflow-x-auto border border-zinc-800">
-            <p>git clone https://github.com/leonardobetti/zero-template.git</p>
-            <p className="text-zinc-600 mt-2"># Install dependencies</p>
-            <p>pnpm install</p>
-            <p className="text-zinc-600 mt-2"># Start developing</p>
-            <p>pnpm dev</p>
+        {/* Quick Start Section - List Style */}
+        <section className="~mb-24/32 pt-12">
+          <div className="flex items-center justify-between mb-8 pb-4 border-b border-zinc-200 dark:border-zinc-800">
+            <h2 className="text-xl font-bold">Quick Start</h2>
+            <div className="text-xs text-zinc-500 font-medium uppercase tracking-widest flex items-center gap-1">
+              Terminal <IconTerminal size={12} />
+            </div>
+          </div>
+          <div className="flex flex-col">
+            {QUICK_START.map((item) => (
+              <div 
+                key={item.name} 
+                className="group flex items-center justify-between py-6 border-b border-zinc-100 dark:border-zinc-900 last:border-0 px-4 -mx-4 cursor-default"
+              >
+                <div className="w-full">
+                  <h3 className="text-lg font-bold">{item.name}</h3>
+                  <div className="mt-2 font-mono text-xs text-zinc-500 bg-zinc-50 dark:bg-zinc-950 p-3 rounded border border-zinc-100 dark:border-zinc-900 overflow-x-auto">
+                    {item.command}
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </section>
 
       </main>
 
       <footer className="max-w-[45.5rem] mx-auto px-6 py-12 border-t border-zinc-200 dark:border-zinc-800 flex flex-col md:flex-row justify-between items-center gap-6">
-        <p className="text-xs text-zinc-400">© 2026 Zero Template. Open source foundation.</p>
-        <div className="flex items-center gap-6 text-xs font-semibold text-zinc-500 uppercase tracking-widest">
-          <Link href="https://github.com/leonardobetti/zero-template" className="hover:text-zinc-900 dark:hover:text-white transition-colors">Documentation</Link>
-          <Link href="https://github.com/leonardobetti/zero-template/issues" className="hover:text-zinc-900 dark:hover:text-white transition-colors">Support</Link>
-        </div>
+        <p className="text-xs text-zinc-400">
+          <a href="https://leonardobetti.co.uk/" target="_blank" rel="noopener noreferrer" className="hover:text-zinc-900 dark:hover:text-white transition-colors underline decoration-zinc-200 underline-offset-4">Leonardo Betti</a> © 2026 Zero Template, made in a rainy sunday.
+        </p>
       </footer>
     </div>
   );
