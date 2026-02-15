@@ -8,6 +8,7 @@ Zero Template is packed with modern primitives for high-performance frontend dev
 
 ### ⚡️ Core Frameworks
 - **Next.js 15+ (App Router)**: The foundation for modern React applications.
+- **Turbopack**: Turbocharged Next.js local development performance.
 - **TypeScript**: Type-safe development out of the box.
 
 ### 🍱 UI & Styling
